@@ -1,0 +1,12 @@
+  <?php 
+         session_start();
+if($_SESSION['level']=="tamu"){
+        header("location:../menu/booking.php?pesan=gagal");
+
+    }   
+      elseif ($_SESSION['level']=="") {
+            
+        header("location:index.php?pesan=gagal");
+        }
+             
+?>
