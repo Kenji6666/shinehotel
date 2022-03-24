@@ -117,6 +117,7 @@ if($_SESSION['level']=="tamu"){
 			<th width="50px">Check Out</th>
       <th width="10px">Jml Tamu</th>
       <th width="10px">Jml Kamar</th>
+      <th width="30px">Status</th>
       <th width="30px">Opsi</th>
     </tr>
   </thead>
@@ -141,10 +142,6 @@ if($_SESSION['level']=="tamu"){
 				<td><?php echo $d['tgl_checkout'];?></td>
         <td><?php echo $d['jumlah_tamu']; ?></td>
         <td><?php echo $d['jumlah_kamar']; ?></td>
-        <td>
-      <a href="delete_booking.php?id=<?php echo $d['id_pesan']; ?>"><button type="button" class="btn btn-danger btn-sm" style="margin-left: 5px; height: 27px; width: 60px;">Hapus</button>
-</a>
-    </td>
 			</tr>
 			<?php
 	}
