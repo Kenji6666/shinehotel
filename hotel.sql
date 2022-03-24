@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 23 Mar 2022 pada 04.44
+-- Waktu pembuatan: 24 Mar 2022 pada 02.38
 -- Versi server: 10.4.13-MariaDB
 -- Versi PHP: 7.4.7
 
@@ -103,21 +103,19 @@ CREATE TABLE `tb_pesan` (
   `tgl_checkin` date NOT NULL,
   `tgl_checkout` date NOT NULL,
   `jumlah_tamu` int(5) NOT NULL,
-  `jumlah_kamar` int(5) NOT NULL
+  `jumlah_kamar` int(5) NOT NULL,
+  `status` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data untuk tabel `tb_pesan`
 --
 
-INSERT INTO `tb_pesan` (`id_pesan`, `nama_tamu`, `telp_tamu`, `tipe_kamar`, `tgl_checkin`, `tgl_checkout`, `jumlah_tamu`, `jumlah_kamar`) VALUES
-(5, 'virgi', 89676876, 'standar', '2022-03-08', '2022-03-10', 2, 1),
-(11, 'tst', 345354, 'standar', '2022-03-02', '2022-03-03', 2, 1),
-(12, 'virgi', 896576, 'standar', '2022-03-02', '2022-03-03', 2, 1),
-(13, 'riski', 8989, 'single', '2022-03-20', '2022-03-21', 2, 1),
-(15, 'atalla', 896758, 'single', '2022-03-09', '2022-03-12', 1, 1),
-(16, 'arpan', 8989, 'standar', '2022-03-16', '2022-03-22', 1, 1),
-(17, 'asssa', 896970, 'single', '2022-03-02', '2022-03-03', 1, 1);
+INSERT INTO `tb_pesan` (`id_pesan`, `nama_tamu`, `telp_tamu`, `tipe_kamar`, `tgl_checkin`, `tgl_checkout`, `jumlah_tamu`, `jumlah_kamar`, `status`) VALUES
+(11, 'tst', 345354, 'standar', '2022-03-02', '2022-03-03', 2, 1, 'Check in'),
+(12, 'virgi', 896576, 'standar', '2022-03-02', '2022-03-03', 2, 1, 'Check in'),
+(13, 'riski', 8989, 'single', '2022-03-20', '2022-03-21', 2, 1, 'Check out'),
+(16, 'arpan', 8989, 'standar', '2022-03-16', '2022-03-22', 1, 1, 'Check in');
 
 -- --------------------------------------------------------
 
@@ -232,7 +230,7 @@ ALTER TABLE `tb_harga`
 -- AUTO_INCREMENT untuk tabel `tb_pesan`
 --
 ALTER TABLE `tb_pesan`
-  MODIFY `id_pesan` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `id_pesan` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
 -- AUTO_INCREMENT untuk tabel `tb_room`
